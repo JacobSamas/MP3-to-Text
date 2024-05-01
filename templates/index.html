@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyric Generator</title>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <style>
+        body { background-color: white; color: black; }
+    </style>
+</head>
+<body class="flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h1 class="text-xl font-bold mb-4">Upload MP3 to Generate Lyrics</h1>
+        <form id="upload-form">
+            <input type="file" name="file" class="my-4" accept=".mp3">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Upload
+            </button>
+        </form>
+        <pre id="lyrics" class="mt-4 p-2 bg-gray-100 rounded"></pre>
+        <button id="copyButton" class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+            Copy Lyrics
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
