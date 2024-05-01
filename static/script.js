@@ -7,9 +7,7 @@ document.getElementById('upload-form').addEventListener('submit', function(event
     })
     .then(response => response.json())
     .then(data => {
-        const lyricsElement = document.getElementById('lyrics');
-        lyricsElement.textContent = data.lyrics || data.error;
-        lyricsElement.style.display = 'block'; // Ensure the lyrics are visible
+        document.getElementById('lyrics').textContent = data.lyrics || data.error;
     })
     .catch(error => console.error('Error:', error));
 });

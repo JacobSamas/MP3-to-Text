@@ -3,36 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyric Generator</title>
+    <title>Upload MP3 to Generate Lyrics</title>
     <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <style>
-        body { 
-            background-color: white; 
-            color: black; 
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
-    </style>
 </head>
-<body class="flex items-center justify-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-xl max-w-lg w-full">
-        <h1 class="text-2xl font-bold mb-6 text-center">Upload MP3 to Generate Lyrics</h1>
-        <form id="upload-form" class="space-y-4">
-            <div class="flex flex-col">
-                <label for="file" class="mb-2 font-semibold">Select your MP3 file:</label>
-                <input type="file" name="file" id="file" class="file-input border rounded p-2" accept=".mp3">
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md max-w-sm w-full">
+        <h1 class="text-xl font-bold text-center mb-6">Upload MP3 to Generate Lyrics</h1>
+        <form id="upload-form" class="mb-4">
+            <div class="mb-4">
+                <input type="file" name="file" id="file" class="file-input border border-gray-300 rounded p-2 w-full">
             </div>
-            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out transform hover:-translate-y-1">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
                 Upload
             </button>
         </form>
-        <div class="mt-6">
-            <label class="font-semibold">Generated Lyrics:</label>
-            <pre id="lyrics" class="p-4 bg-gray-100 rounded text-sm"></pre>
+        <div class="text-sm bg-gray-100 p-4 rounded mb-4" id="lyrics">
+            <!-- Lyrics will be displayed here -->
         </div>
-        <button id="copyButton" class="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out transform hover:scale-105">
-            Copy Lyrics
-        </button>
+        <div>
+            <button id="copyButton" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded w-full">
+                Copy Lyrics
+            </button>
+        </div>
     </div>
-    <script src="../static/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
